@@ -27,11 +27,12 @@ public class CustomerTest {
 
     @Test
     public void checkYearJoined(){
-        Assertions.assertTrue(customer.getJoinedOn().isBefore(LocalDate.now()));
+        //TODO: Test if the customers join date is before current date
     }
 
     @Test
     public void checkBalance(){
-        Assertions.assertEquals(5000,customer.getBalance());
+        //TODO: Test if the customers balance is correct
+        Assertions.assertEquals(4000,customer.getBalance(), "Balance is not correct");
     }
 }

@@ -57,12 +57,6 @@ public class CheckoutTest {
             checkout.processOrder();
         });
 
-//        String expectedMessage = "For input string";
-//        String actualMessage = exception.getMessage();
-//
-//        assertTrue(actualMessage.contains(expectedMessage));
-
-
     }
 
     @Test

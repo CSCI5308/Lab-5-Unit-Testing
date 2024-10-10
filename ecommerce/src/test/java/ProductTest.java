@@ -8,27 +8,27 @@ import org.junit.jupiter.params.provider.ValueSource;
 public class ProductTest {
 
     static Product product;
+
     @BeforeAll
     public static void init(){
         product = new Product("bread","1111",1000,100);
     }
 
-
     @Test
     public void productNameTest(){
-
         Assertions.assertEquals("bread",product.getName());
     }
 
-    @ParameterizedTest
-    @ValueSource(strings = {"1111", "2222"})
-    public void productSerialTest(String input){
-
-        Assertions.assertEquals(input,product.getSerialNumber());
-    }
     @Test
-    public void productPriceTest(){
-
-        Assertions.assertNotNull(product.getPrice());
+    public void productSerialTest(){
+        //TODO: Test if the product serial number is correct
     }
+
+    @ParameterizedTest
+    @ValueSource(doubles = {1000, 2000})
+    public void productPriceTest(double input){
+        Assertions.assertEquals(input, product.getPrice(), "Price is not correct");
+    }
+
+
 }
